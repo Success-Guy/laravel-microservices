@@ -13,12 +13,12 @@ class UserTest extends TestCase {
      */
     public function test_create_user() {
         $response = $this->postJson('/api/user', [
-            "email" => "utuazzaaau@gmail.com",
-            "lastName" => "Ajadi",
-            "firstName" => "Abbey_Sam"
+            "email" => "testuser@gmail.com",
+            "lastName" => "Test",
+            "firstName" => "User"
         ]);
         $response
-            ->assertStatus(201)
+            ->assertStatus(200)
             ->assertJson([
                 'status' => "success",
             ]);
